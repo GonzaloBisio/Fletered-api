@@ -37,5 +37,11 @@ public class Usuario {
     @Column(name = "creation_time", nullable = false)
     private LocalDateTime creationTime;
 
+    @Column(name = "firebase_id", nullable = false)
+    private String firebaseId;
+
+    @Column(name = "dni", nullable = false)
+    private String dni;
+
 
 }

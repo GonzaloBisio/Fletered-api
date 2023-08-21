@@ -3,6 +3,7 @@ package com.system.fletered.controller;
 import com.system.fletered.dto.UsuarioDto;
 import com.system.fletered.dto.VehiculoDto;
 import com.system.fletered.entities.Usuario;
+import com.system.fletered.exceptions.DuplicateEmailException;
 import com.system.fletered.repository.UsuarioRepository;
 import com.system.fletered.repository.VehiculoRepository;
 import com.system.fletered.service.UsuarioService;
@@ -38,6 +39,11 @@ public class UsuarioController {
 
     @PostMapping()
     public ResponseEntity<Object> createUsuario(@RequestBody UsuarioDto createUsuarioRequest) {
+        // Check if the email already exists in the database
+        if (usuarioService.existsByEmail(createUsuarioRequest.getEmail())) {
+            throw new DuplicateEmailException("Email is already registered.");
+        }
+
         try {
             return tools.ok(this.usuarioService.createUsuario(createUsuarioRequest));
         } catch (Exceptions e) {
@@ -48,6 +54,7 @@ public class UsuarioController {
             return tools.error(ex.getMessage());
         }
     }
+
 
     @GetMapping("/{id}")
     public Usuario getUser(@PathVariable Long id) {
