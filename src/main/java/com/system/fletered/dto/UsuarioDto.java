@@ -19,4 +19,7 @@ public class UsuarioDto implements Serializable {
     String contactPhone;
     LocalDateTime creationTime;
     String token;
+    String firebaseId;
+    String dni;
+
 }

@@ -22,7 +22,8 @@ public class Conductor {
     @JoinColumn(name = "medioPago")
     private MediosPago mediosPago;
 
-    @Column(name = "dni",nullable = false)
-    private String dni;
+    @OneToOne(orphanRemoval = true)
+    @JoinColumn(name = "usuario_id")
+    private Usuario usuario;
 
 }
