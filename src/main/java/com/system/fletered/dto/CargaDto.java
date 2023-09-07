@@ -1,5 +1,8 @@
 package com.system.fletered.dto;
 
+import com.system.fletered.entities.Solicitud;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.Value;
 
 import java.io.Serializable;
@@ -8,8 +11,12 @@ import java.util.List;
 /**
  * DTO for {@link com.system.fletered.entities.Carga}
  */
-@Value
+
+@Getter
+@Setter
 public class CargaDto implements Serializable {
     Long id;
-    List<PaletDto> palets;
+    String label;
+    String medida;
+    public Solicitud solicitud;
 }

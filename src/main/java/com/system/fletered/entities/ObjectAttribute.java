@@ -13,7 +13,7 @@ import java.io.Serializable;
 @Builder
 @Entity
 @Table(name = "object_attribute")
-public class ObjectAttribute {
+public class ObjectAttribute implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

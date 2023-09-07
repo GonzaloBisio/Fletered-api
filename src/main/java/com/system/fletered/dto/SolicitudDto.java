@@ -1,13 +1,20 @@
 package com.system.fletered.dto;
 
+import com.system.fletered.entities.Carga;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.Value;
 
 import java.io.Serializable;
 
+import java.util.Date;
+import java.util.List;
+
 /**
  * DTO for {@link com.system.fletered.entities.Solicitud}
  */
-@Value
+@Getter
+@Setter
 public class SolicitudDto implements Serializable {
     Long id;
     String dni;
@@ -15,8 +22,11 @@ public class SolicitudDto implements Serializable {
     String lastName;
     String email;
     String phoneNumber;
-    String street;
-    String streetNumber;
-
-
+    String InitialStreet;
+    String InitialStreetNumber;
+    String FinalStreet;
+    String FinalStreetNumber;
+    Date PeriodoInicio;
+    Date PeriodoFin;
+    public List<CargaDto> cargas;
 }

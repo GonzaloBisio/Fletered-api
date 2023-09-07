@@ -1,6 +1,8 @@
 package com.system.fletered.entities;
 
 import jakarta.persistence.*;
+
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import lombok.*;
@@ -13,7 +15,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "usuario")
-public class Usuario {
+public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

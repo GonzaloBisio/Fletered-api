@@ -3,6 +3,8 @@ package com.system.fletered.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
 @Data
@@ -11,7 +13,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "vehiculo")
-public class Vehiculo {
+public class Vehiculo implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
