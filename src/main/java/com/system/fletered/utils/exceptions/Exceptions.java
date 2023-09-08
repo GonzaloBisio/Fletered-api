@@ -1,4 +1,4 @@
-package com.system.fletered.utils.exceptions.generic;
+package com.system.fletered.utils.exceptions;
 
 import org.springframework.http.HttpStatus;
 

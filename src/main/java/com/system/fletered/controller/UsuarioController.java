@@ -1,15 +1,12 @@
 package com.system.fletered.controller;
 
 import com.system.fletered.dto.UsuarioDto;
-import com.system.fletered.dto.VehiculoDto;
 import com.system.fletered.entities.Usuario;
 import com.system.fletered.exceptions.DuplicateEmailException;
 import com.system.fletered.repository.UsuarioRepository;
-import com.system.fletered.repository.VehiculoRepository;
 import com.system.fletered.service.UsuarioService;
-import com.system.fletered.service.VehiculoService;
 import com.system.fletered.utils.Tools;
-import com.system.fletered.utils.exceptions.generic.Exceptions;
+import com.system.fletered.utils.exceptions.Exceptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

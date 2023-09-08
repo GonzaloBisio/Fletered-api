@@ -1,13 +1,10 @@
 package com.system.fletered.controller;
 
 import com.system.fletered.dto.AttributeDto;
-import com.system.fletered.dto.VehiculoDto;
 import com.system.fletered.repository.AttributeRepository;
-import com.system.fletered.repository.VehiculoRepository;
 import com.system.fletered.service.AttributeService;
-import com.system.fletered.service.VehiculoService;
 import com.system.fletered.utils.Tools;
-import com.system.fletered.utils.exceptions.generic.Exceptions;
+import com.system.fletered.utils.exceptions.Exceptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
