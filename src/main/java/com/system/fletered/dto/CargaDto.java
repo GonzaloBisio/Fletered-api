@@ -18,5 +18,6 @@ public class CargaDto implements Serializable {
     Long id;
     String label;
     String medida;
+    Integer cantidad;
     public Solicitud solicitud;
 }

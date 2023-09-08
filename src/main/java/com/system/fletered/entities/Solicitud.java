@@ -37,23 +37,24 @@ public class Solicitud implements Serializable {
     @Column(name = "phone_number", length = 50)
     private String phoneNumber;
 
-    @Column(name = "initial_street", length = 50)
+
+    @Column(name = "periodo_inicio1")
+    private String PeriodoInicio1;
+
+    @Column(name = "periodo_inicio2")
+    private String PeriodoInicio2;
+
+    @Column(name = "periodo_fin1")
+    private String PeriodoFin1;
+
+    @Column(name = "periodo_fin2")
+    private String PeriodoFin2;
+
+    @Column(name = "initial_street")
     private String InitialStreet;
 
-    @Column(name = "initial_street_number", length = 50)
-    private String InitialStreetNumber;
-
-    @Column(name = "final_street", length = 50)
+    @Column(name = "final_street")
     private String FinalStreet;
-
-    @Column(name = "final_street_number", length = 50)
-    private String FinalStreetNumber;
-
-    @Column(name = "periodo_inicio")
-    private Date PeriodoInicio;
-
-    @Column(name = "periodo_fin")
-    private Date PeriodoFin;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "solicitud")
     private List<Carga> cargas = new ArrayList<>(); // Initialize as an empty ArrayList

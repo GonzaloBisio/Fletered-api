@@ -30,6 +30,7 @@ public class CargaService {
                     .solicitud(solicitud)
                     .label(createCargaRequest.getLabel())
                     .medida(createCargaRequest.getMedida())
+                    .cantidad(createCargaRequest.getCantidad())
                     .build();
 
             // Add the carga to the solicitud's list of cargas

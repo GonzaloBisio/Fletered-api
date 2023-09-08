@@ -22,11 +22,13 @@ public class SolicitudDto implements Serializable {
     String lastName;
     String email;
     String phoneNumber;
-    String InitialStreet;
-    String InitialStreetNumber;
-    String FinalStreet;
-    String FinalStreetNumber;
-    Date PeriodoInicio;
-    Date PeriodoFin;
+    String PeriodoInicio1;
+    String PeriodoInicio2;
+    String PeriodoFin1;
+    String PeriodoFin2;
+    String initialStreet;
+    String finalStreet;
+
+
     public List<CargaDto> cargas;
 }
