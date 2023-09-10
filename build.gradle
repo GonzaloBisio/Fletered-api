@@ -10,8 +10,6 @@ buildscript {
 	}
 }
 
-
-
 plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.1.1'
@@ -49,7 +47,6 @@ dependencies {
 	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.5")
 	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")
 
-
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
@@ -60,4 +57,10 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+// Add the jar configuration block below
+jar {
+	baseName = 'fletered'
+	version = '1.0.0' // Replace with your actual version number
 }
